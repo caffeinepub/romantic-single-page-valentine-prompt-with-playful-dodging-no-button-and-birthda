@@ -1,0 +1,98 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-mobile-first-single-page-romantic-ui-that-displays-the-headline-text-exactly-pondati-will-you-be-my-valentine-and-shows-two-clearly-labeled-buttons-yes-and-no",
+      "featureTitle": "Create a mobile-first, single-page romantic UI that displays the headline text exactly: \"Pondati, will you be my Valentine?\" and shows two clearly labeled buttons: \"Yes\" and \"No\".",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-playful-interaction-for-the-no-button-when-the-user-attempts-to-interact-with-it-hover-on-desktop-pointer-down-tap-on-mobile-the-button-should-move-to-a-new-random-position-within-the-visible-safe-area-so-it-becomes-difficult-or-impossible-to-click",
+      "featureTitle": "Implement a playful interaction for the \"No\" button: when the user attempts to interact with it (hover on desktop, pointer-down/tap on mobile), the button should move to a new random position within the visible safe area so it becomes difficult or impossible to click.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-when-the-user-clicks-yes-replace-the-main-page-content-with-a-romantic-reveal-view-and-display-the-message-text-exactly-as-follows-with-reasonable-line-breaks-paragraph-styling-happy-birthday-pondati-i-know-you-re-thinking-that-i-forgot-your-birthday-but-i-didn-t-thank-you-for-everything-thank-you-for-loving-me-thank-you-for-all-the-moments-we-have-spent-together-be-happy-stay-healthy-happy-birthday-pondati-my-sweet-potato",
+      "featureTitle": "When the user clicks \"Yes\", replace the main page content with a romantic reveal view and display the message text exactly as follows (with reasonable line breaks/paragraph styling): \"Happy Birthday Pondati! I know you’re thinking that I forgot your birthday, but I didn’t. Thank you for everything. Thank you for loving me. Thank you for all the moments we have spent together. Be happy, stay healthy. Happy Birthday Pondati, my sweet potato!\"",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-cohesive-romantic-visual-theme-not-blue-purple-across-the-page-soft-warm-palette-pinks-reds-creams-elegant-typography-including-a-cursive-style-headline-subtle-animations-e-g-floating-hearts-or-gentle-fade-scale-transitions-and-consistent-spacing-and-alignment",
+      "featureTitle": "Apply a cohesive romantic visual theme (not blue/purple) across the page: soft warm palette (pinks/reds/creams), elegant typography (including a cursive-style headline), subtle animations (e.g., floating hearts or gentle fade/scale transitions), and consistent spacing and alignment.",
+      "files": [
+        "frontend/index.css",
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-required-generated-images-as-static-assets-under-frontend-public-assets-generated-and-use-them-in-the-ui-e-g-as-background-texture-without-routing-images-through-the-backend",
+      "featureTitle": "Add the required generated images as static assets under `frontend/public/assets/generated` and use them in the UI (e.g., as background/texture) without routing images through the backend.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

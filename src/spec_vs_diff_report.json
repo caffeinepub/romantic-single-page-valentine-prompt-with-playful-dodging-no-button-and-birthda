@@ -1,0 +1,73 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T08:33:29.177Z",
+  "summary": "Core single-page Valentine prompt and the dodging \"No\" interaction are implemented, with warm-theme styling and heart animations. However, several text-exactness requirements are not met (button labels and reveal message), and the required generated image assets (and explicit collage background usage) are not evidenced in the diff. The diff also introduces unrelated Internet Identity/react-query/back-end scaffolding not requested.",
+  "missing_requirements": [
+    {
+      "id": "REQ-1",
+      "requirement": "Show two clearly labeled buttons exactly: \"Yes\" and \"No\".",
+      "reason": "The \"Yes\" button label is not exactly \"Yes\"; it includes extra punctuation/emoji (\"Yes! 💕\"). The \"No\" label cannot be confirmed due to truncation.",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "requirement": "On \"Yes\" click, replace content and display the message text exactly: \"Happy Birthday Pondati! I know you’re thinking that I forgot your birthday, but I didn’t. Thank you for everything. Thank you for loving me. Thank you for all the moments we have spent together. Be happy, stay healthy. Happy Birthday Pondati, my sweet potato!\"",
+      "reason": "The displayed message text differs from the required exact text: it uses straight apostrophes (\"you're\", \"didn't\") instead of the curly apostrophes shown in the spec (you’re, didn’t), and adds extra emojis to the final line (\"🥔💕\"). Also the message is split with a separate title plus paragraphs rather than the exact full message string.",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Add the required generated images under `frontend/public/assets/generated` and reference them directly; the reveal view uses the romantic collage background image.",
+      "reason": "No image asset files are shown as added under `frontend/public/assets/generated`. CSS references the heart-pattern tile, but there is no evidence the romantic collage background image exists or is used in the reveal view.",
+      "evidence": [
+        "frontend/src/index.css",
+        "frontend/src/App.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Introduced Internet Identity authentication provider and related hooks usage (and react-query actor handling) despite authentication being a non-goal and specific files being constrained from edits.",
+      "reason": "BuildRequest explicitly lists Internet Identity authentication as a non-goal and restricts editing certain hook/main files; diff includes these files and wiring.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Added a backend canister file (`backend/main.mo`) even though no backend work/persistence was requested (and backend persistence is a non-goal).",
+      "reason": "BuildRequest focuses on a frontend single-page experience and states backend persistence/storage is a non-goal.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Added extra emojis to user-facing button/message text (e.g., \"Yes! 💕\" and \"...sweet potato! 🥔💕\") beyond the specified exact strings.",
+      "reason": "Requirements demand exact headline/button labels and exact reveal message text; emojis are not part of the requested exact text.",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

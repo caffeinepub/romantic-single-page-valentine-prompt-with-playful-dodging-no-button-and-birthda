@@ -1,0 +1,14 @@
+{
+  "backend/main.mo": "Empty Motoko actor definition.",
+  "feature_evidence.json": "Feature evidence report mapping UI features to project files and components.",
+  "frontend-file-summaries.txt": "Short descriptions of key frontend files and their romantic UI behavior.",
+  "frontend/index.css": "Tailwind base theme variables defining red/pink color palette and dark mode support.",
+  "frontend/index.html": "HTML entry point loading the React app into the root div.",
+  "frontend/src/App.tsx": "Main React UI with Valentine prompt, dodging No button, Yes-triggered birthday reveal, and floating hearts.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and manages a backend actor tied to Internet Identity state.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context and provider for handling Internet Identity login, persistence, and status.",
+  "frontend/src/index.css": "Full romantic styling including fonts, gradients, animations, and responsive Valentine theme.",
+  "frontend/src/main.tsx": "React entry point initializing query client, identity provider, and rendering the App.",
+  "frontend/tailwind.config.js": "Configures Tailwind with dark mode, content paths, custom colors, animations, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Defines the project’s build state, requirements, and design notes for a romantic mobile-first Valentine/birthday webpage with interactive button behavior and image assets."
+}

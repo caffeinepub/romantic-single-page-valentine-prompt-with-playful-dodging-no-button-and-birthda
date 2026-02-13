@@ -1,0 +1,110 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Single-page Valentine prompt with dodging No button and Birthday reveal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a mobile-first single-page UI with the exact Valentine headline and two clearly labeled Yes/No buttons.",
+      "acceptanceCriteria": [
+        "On initial load, the page shows the exact headline text and two buttons labeled \"Yes\" and \"No\".",
+        "Layout is usable on common Android Chrome viewport sizes (e.g., 360x640 up to 412x915) without horizontal scrolling."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page React UI with the exact headline text \"Pondati, will you be my Valentine?\" and two buttons labeled \"Yes\" and \"No\"; ensure mobile-first layout and no extra routes/pages are introduced."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Make the No button playfully dodge interaction by moving to random safe positions in-view on hover/pointer-down.",
+      "acceptanceCriteria": [
+        "Attempting to click/tap the \"No\" button causes it to reposition within the viewport (it should not move off-screen).",
+        "The \"Yes\" button remains stationary and easily clickable.",
+        "The interaction works on both desktop (mouse) and Android Chrome (touch)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Implement the dodging behavior for the \"No\" button using pointer/touch-friendly handlers (e.g., onPointerDown plus onMouseEnter) and compute random positions constrained to a visible safe area within the main container so it never moves off-screen; keep the \"Yes\" button stationary."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "On Yes click, replace the prompt with a romantic reveal view showing the exact Birthday message text.",
+      "acceptanceCriteria": [
+        "Clicking \"Yes\" transitions to a new view state (or fully replaces the content) showing the full message text.",
+        "After clicking \"Yes\", the Valentine prompt and buttons are no longer the primary focus (hidden or clearly replaced)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a view-state toggle so clicking \"Yes\" fully replaces the main prompt with a reveal view that displays the message text exactly: \"Happy Birthday Pondati! I know you’re thinking that I forgot your birthday, but I didn’t. Thank you for everything. Thank you for loving me. Thank you for all the moments we have spent together. Be happy, stay healthy. Happy Birthday Pondati, my sweet potato!\" with reasonable paragraph/line-break styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a cohesive warm romantic theme (not blue/purple) with elegant typography and subtle animations.",
+      "acceptanceCriteria": [
+        "The UI uses a consistent romantic theme with warm colors and elegant typography.",
+        "Animations, if present, are subtle and do not obstruct reading or button interaction.",
+        "All text is legible with sufficient contrast on both the initial prompt and the reveal view."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create a src-level global stylesheet (keeping single-page behavior) that imports the existing base Tailwind stylesheet and adds romantic-theme styling: warm pink/red/cream palette, a cursive-style headline font, and subtle non-obstructive animations (e.g., gentle fade/scale transitions and floating-heart keyframes)."
+        },
+        {
+          "path": "frontend/index.css",
+          "operation": "modify",
+          "description": "Adjust existing global CSS variables and/or base body styling to better match a warm romantic palette (avoid blue/purple), while maintaining legible contrast and consistent spacing/alignment across the prompt and reveal views."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply the romantic theme in the UI via Tailwind classes and/or theme CSS (cursive headline, warm gradients, consistent spacing) and render subtle decorative/animated elements that do not interfere with button interaction."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add required generated images under frontend/public/assets/generated and reference them directly in the UI (no backend).",
+      "acceptanceCriteria": [
+        "Generated images exist under `frontend/public/assets/generated` and are referenced directly by the frontend.",
+        "The reveal view uses the romantic collage background image.",
+        "No backend endpoints are used for serving images."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/valentine-collage-bg.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the generated static asset file at frontend/public/assets/generated/valentine-collage-bg.dim_1920x1080.png for direct frontend use (no backend involvement)."
+        },
+        {
+          "path": "frontend/public/assets/generated/heart-pattern-tile.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated static asset file at frontend/public/assets/generated/heart-pattern-tile.dim_512x512.png for direct frontend use (no backend involvement)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Reference the generated images directly from the frontend: use frontend/public/assets/generated/heart-pattern-tile.dim_512x512.png as a subtle repeating texture on the initial prompt, and use frontend/public/assets/generated/valentine-collage-bg.dim_1920x1080.png as the reveal view background (ensure readability with appropriate overlays)."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add global helper classes (or base styles) to support using frontend/public/assets/generated/heart-pattern-tile.dim_512x512.png as a seamless background texture and to support readable overlays atop frontend/public/assets/generated/valentine-collage-bg.dim_1920x1080.png."
+        }
+      ]
+    }
+  ]
+}

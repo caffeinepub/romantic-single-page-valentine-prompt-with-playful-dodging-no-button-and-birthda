@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a romantic, mobile-responsive single-page webpage for \"Pondati\" with a Valentine prompt, playful dodging \"No\" button, and a birthday message reveal on \"Yes\" click (optimized for Android Chrome).",
+  "architectural_notes": [
+    "Single-page, mobile-first responsive layout targeted for Android Chrome",
+    "Use JavaScript to reposition the \"No\" button randomly on hover/click and keep \"Yes\" stationary",
+    "On \"Yes\" click, replace/transition main content to a reveal section/message"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Romantic collage-style background with warm pink/red tones and soft bokeh hearts (valentine-collage-bg.dim_1920x1080.png)\n- Seamless subtle heart pattern texture, warm pink on cream (heart-pattern-tile.dim_512x512.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-mobile-first-single-page-romantic-ui-that-displays-the-headline-text-exactly-pondati-will-you-be-my-valentine-and-shows-two-clearly-labeled-buttons-yes-and-no",
+      "title": "Create a mobile-first, single-page romantic UI that displays the headline text exactly: \"Pondati, will you be my Valentine?\" and shows two clearly labeled buttons: \"Yes\" and \"No\".",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-playful-interaction-for-the-no-button-when-the-user-attempts-to-interact-with-it-hover-on-desktop-pointer-down-tap-on-mobile-the-button-should-move-to-a-new-random-position-within-the-visible-safe-area-so-it-becomes-difficult-or-impossible-to-click",
+      "title": "Implement a playful interaction for the \"No\" button: when the user attempts to interact with it (hover on desktop, pointer-down/tap on mobile), the button should move to a new random position within the visible safe area so it becomes difficult or impossible to click.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-when-the-user-clicks-yes-replace-the-main-page-content-with-a-romantic-reveal-view-and-display-the-message-text-exactly-as-follows-with-reasonable-line-breaks-paragraph-styling-happy-birthday-pondati-i-know-you-re-thinking-that-i-forgot-your-birthday-but-i-didn-t-thank-you-for-everything-thank-you-for-loving-me-thank-you-for-all-the-moments-we-have-spent-together-be-happy-stay-healthy-happy-birthday-pondati-my-sweet-potato",
+      "title": "When the user clicks \"Yes\", replace the main page content with a romantic reveal view and display the message text exactly as follows (with reasonable line breaks/paragraph styling): \"Happy Birthday Pondati! I know you’re thinking that I forgot your birthday, but I didn’t. Thank you for everything. Thank you for loving me. Thank you for all the moments we have spent together. Be happy, stay healthy. Happy Birthday Pondati, my sweet potato!\"",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-romantic-visual-theme-not-blue-purple-across-the-page-soft-warm-palette-pinks-reds-creams-elegant-typography-including-a-cursive-style-headline-subtle-animations-e-g-floating-hearts-or-gentle-fade-scale-transitions-and-consistent-spacing-and-alignment",
+      "title": "Apply a cohesive romantic visual theme (not blue/purple) across the page: soft warm palette (pinks/reds/creams), elegant typography (including a cursive-style headline), subtle animations (e.g., floating hearts or gentle fade/scale transitions), and consistent spacing and alignment.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-generated-images-as-static-assets-under-frontend-public-assets-generated-and-use-them-in-the-ui-e-g-as-background-texture-without-routing-images-through-the-backend",
+      "title": "Add the required generated images as static assets under `frontend/public/assets/generated` and use them in the UI (e.g., as background/texture) without routing images through the backend.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a romantic, mobile-responsive single-page webpage that asks: \"Pondati, will you be my Valentine?\" with Yes/No buttons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add playful interaction: the \"No\" button moves/becomes unclickable when hovered or clicked so it cannot be selected",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "On \"Yes\" click, replace the page content with a romantic themed reveal message wishing \"Happy Birthday Pondati\" and the provided text",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Ensure responsive design and compatibility for opening on Android using Chrome (mobile-first layout, clean CSS/JS)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Romantic single-page Valentine prompt with playful dodging No button and Birthday reveal",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

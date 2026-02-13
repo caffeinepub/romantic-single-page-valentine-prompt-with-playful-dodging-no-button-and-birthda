@@ -1,0 +1,4 @@
+{
+  "frontend/src/App.tsx": "Single-page romantic Valentine's Day application with a playful dodging \"No\" button that moves on interaction, a stationary \"Yes\" button that reveals a birthday message, and floating heart animations throughout.",
+  "frontend/src/index.css": "Complete styling for the romantic Valentine's page including warm pink/red/cream color palette, Dancing Script cursive font for headlines, Poppins for body text, floating heart animations, responsive design for mobile devices, and smooth transitions for all interactive elements."
+}

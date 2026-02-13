@@ -1,0 +1,126 @@
+{
+  "kind": "build_request",
+  "title": "Romantic single-page Valentine prompt with playful dodging No button and Birthday reveal",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a mobile-first, single-page romantic UI that displays the headline text exactly: \"Pondati, will you be my Valentine?\" and shows two clearly labeled buttons: \"Yes\" and \"No\".",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "ik romantic themed webpage for my girlfriend on webpage it should display like pondati will you be my valentine and there should be two options yes and no"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On initial load, the page shows the exact headline text and two buttons labeled \"Yes\" and \"No\".",
+        "Layout is usable on common Android Chrome viewport sizes (e.g., 360x640 up to 412x915) without horizontal scrolling."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a playful interaction for the \"No\" button: when the user attempts to interact with it (hover on desktop, pointer-down/tap on mobile), the button should move to a new random position within the visible safe area so it becomes difficult or impossible to click.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "the no button should be playful whenever she try to click on no it should move or become unclickable and forcing her to click yes"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Attempting to click/tap the \"No\" button causes it to reposition within the viewport (it should not move off-screen).",
+        "The \"Yes\" button remains stationary and easily clickable.",
+        "The interaction works on both desktop (mouse) and Android Chrome (touch)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "When the user clicks \"Yes\", replace the main page content with a romantic reveal view and display the message text exactly as follows (with reasonable line breaks/paragraph styling): \"Happy Birthday Pondati! I know you’re thinking that I forgot your birthday, but I didn’t. Thank you for everything. Thank you for loving me. Thank you for all the moments we have spent together. Be happy, stay healthy. Happy Birthday Pondati, my sweet potato!\"",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "when she click yes there it should display happy birthday pondati I know you're thinking that I forgot your birthday but I didn't thankyouu for everything thankyouu for loving me thank you for all the moments we have spent together be happy stay healthy happy birthday pondati my sweet potato"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking \"Yes\" transitions to a new view state (or fully replaces the content) showing the full message text.",
+        "After clicking \"Yes\", the Valentine prompt and buttons are no longer the primary focus (hidden or clearly replaced)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Apply a cohesive romantic visual theme (not blue/purple) across the page: soft warm palette (pinks/reds/creams), elegant typography (including a cursive-style headline), subtle animations (e.g., floating hearts or gentle fade/scale transitions), and consistent spacing and alignment.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "ik romantic themed webpage",
+          "with romantic theme"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The UI uses a consistent romantic theme with warm colors and elegant typography.",
+        "Animations, if present, are subtle and do not obstruct reading or button interaction.",
+        "All text is legible with sufficient contrast on both the initial prompt and the reveal view."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add the required generated images as static assets under `frontend/public/assets/generated` and use them in the UI (e.g., as background/texture) without routing images through the backend.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "romantic collage background and a message",
+          "heart-themed background"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images exist under `frontend/public/assets/generated` and are referenced directly by the frontend.",
+        "The reveal view uses the romantic collage background image.",
+        "No backend endpoints are used for serving images."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for any user-facing text in the app.",
+    "Do not modify files under `frontend/src/components/ui` (compose them instead).",
+    "Do not edit files under `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useInternetIdentity.tsx`, `frontend/src/hooks/useActor.ts`, or `frontend/src/main.tsx`.",
+    "Keep the project as a single-page experience; no additional pages/routes are required."
+  ],
+  "nonGoals": [
+    "Internet Identity authentication.",
+    "Backend canister data persistence or storage for this page.",
+    "Real-time features (websockets/chat).",
+    "Any third-party integrations (social APIs, email, SMS, etc.)."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Romantic collage-style background with warm pink/red tones and soft bokeh hearts (valentine-collage-bg.dim_1920x1080.png)",
+      "Seamless subtle heart pattern texture, warm pink on cream (heart-pattern-tile.dim_512x512.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

@@ -1,2 +1,3 @@
-# romantic-single-page-valentine-prompt-with-playful-dodging-no-button-and-birthda
-Exported from Caffeine project: Romantic single-page Valentine prompt with playful dodging No button and Birthday reveal
+## Romantic single-page Valentine prompt with playful dodging No button and Birthday reveal
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`
